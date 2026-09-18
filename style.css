@@ -1,0 +1,233 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+}
+
+.navbar{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.leftNav{
+    display: flex;
+    align-items: center;
+    padding : 0px 10px 15px 25px;
+    /* gap: 10px; */
+    /* padding: 20px; */
+    /* font-size: x-large;
+    font-weight: bold;
+    color: #5AC2D3; */
+}
+.leftNav img{
+    /* width: 30px; */
+    height: 50px;
+    /* color: #5AC2D3; */
+}
+
+.active{
+    color: #5AC2D3;
+}
+
+
+/* Hover state */
+.nav-item a:hover {
+  color: #09BCCA;
+  
+   /* Change to your preferred color */
+}
+
+#prices:hover{
+    color: #09BCCA;
+    cursor: pointer;
+}
+
+nav li{
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+    color: black;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+li select {
+    background-color: white;
+    color: black;
+    border: none;
+    font-size: medium;
+}
+select option {
+    text-decoration: none;
+    font-size: medium;
+    
+}
+
+.rightNav{
+    margin-top: -5px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.joinNowBox{
+    background-color: #09BCCA;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 21px 25px 21px 25px;
+}
+#joinNow{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.navbar {
+    padding-right: 0px;
+}
+
+.heroSection{
+    margin-top: -21px;
+    width: 100vw;
+    height: 500px;
+    background-image: linear-gradient(rgba(10,25,60,0.72), rgba(10,25,60,0.72)), url('./images/student2.jpeg');
+    background-size: cover ;
+     /* background-size: 100%; */
+     background-repeat: no-repeat;
+    background-position: center top;
+}
+.heroHeadingBox{
+    margin-left: 100px;
+    padding-top: 100px;
+    color: #FFFFFF;
+    width: 35%;
+}
+.heroHeading{
+    color: #09BCCA;
+    /* font-size: 20px;
+    font-weight: 600;
+    margin-left: 50px; */
+}
+.heroHeadingBox h2{
+    font-size: 50px;
+    font-weight: 500;
+    /* margin-left: 50px; */
+    margin: 0px;
+    padding: 0px;
+}
+.heroHeadingBox p {
+    font-size: small;
+    margin-bottom: 20px;
+}
+.joinNowButton{
+    background-color: #FFFFFF;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.readMoreButton{
+    background-color: #09BCCA;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+.heroSliderButton{
+    position: absolute;
+    top: 35%;
+    left: 87%;
+    /* transform: translate(-50%, -50%); */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    filter: invert(0.6);
+}
+
+.feature{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #e8f7fa;
+    width: 180px;
+    height: 150px;
+    margin: 10px;
+}
+.feature img{
+    width: 50px;
+    height: 50px;
+    /* transform: scaleX(-1); */
+}
+.feature div:nth-child(2){
+    font-size: 17px;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+.feature div:nth-child(3){
+    font-size: 12px;
+    margin: 10px 0px;
+}
+.feature:hover{
+    transform: scale(1.03);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.featuresBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.aboutUsBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.aboutUsBox img{
+    width: 480px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+.aboutUsText{
+    width: 500px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
