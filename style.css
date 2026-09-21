@@ -18,12 +18,12 @@ ul > li{
 }
 
 .navbar {
-    height: 40px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #FFFFFF;
-    padding: 10px;
+    /* padding: 10px; */
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -39,11 +39,6 @@ ul > li{
     height: 50px;
 
 }
-
-.active {
-    color: #5AC2D3;
-}
-
 
 /* Hover state */
 .nav-item a:hover {
@@ -83,7 +78,7 @@ select option {
 .rightNav {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 2vw;
 }
 
 .joinNowBox {
@@ -99,10 +94,6 @@ select option {
 #joinNow {
     color: #FFFFFF;
     text-decoration: none;
-}
-
-.navbar {
-    padding-right: 0px;
 }
 
 .heroSection{
@@ -139,6 +130,8 @@ select option {
     margin-bottom: 20px;
 }
 .joinNowButton{
+    height: 36px;
+    width: 108px;
     background-color: #FFFFFF;
     color: black;
     border: none;
@@ -146,6 +139,10 @@ select option {
     margin-right: 10px;
     cursor: pointer;
     border-radius: 2px;
+}
+.joinNowButton:hover{
+    background-color: whitesmoke;
+    color: grey;
 }
 .readMoreButton{
     height: 36px;
@@ -158,6 +155,9 @@ select option {
     cursor: pointer;
     border-radius: 2px;
 }
+.readMoreButton:hover{
+    background-color: #06A9B7;
+}
 .heroSliderButton{
     position: absolute;
     top: 35%;
@@ -167,6 +167,11 @@ select option {
     flex-direction: column;
     gap: 10px;
     filter: invert(0.6);
+}
+.heroSliderButton img:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .feature{
@@ -433,15 +438,21 @@ select option {
 .coursesCards {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
   margin-top: 30px;
 }
 
-.card1,
-.card2,
-.card3 {
+
+.courseCard {
   width: 350px;
   background-color: #F1FCFF;
+}
+
+.courseCard:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 
@@ -593,6 +604,7 @@ select option {
 .instructorCards {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 25px;
 }
 
@@ -603,7 +615,11 @@ select option {
   width: 225px;
   background-color: #F1FCFF;
 }
-
+.instructorCard:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+    /* cursor: pointer; */
+}
 
 /* Image */
 
@@ -887,7 +903,7 @@ select option {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 10px 90px;
+    margin: 15px 90px;
     color: #FFFFFF;
     font-size: 12px;
 }
@@ -908,320 +924,6 @@ select option {
 /* =========================
    RESPONSIVE DESIGN
    ========================= */
-
-/* Tablets and smaller laptops */
-
-@media (max-width: 1000px) {
-
-  /* Navbar */
-
-  nav a {
-    padding: 0 18px;
-  }
-
-  /* Hero */
-
-  .heroContent {
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-
-  .heroContent span {
-    width: 550px;
-  }
-
-  /* Features */
-
-  .features {
-    padding-left: 40px;
-    padding-right: 40px;
-    gap: 15px;
-  }
-
-  .featuresCard {
-    width: 24%;
-    padding: 20px;
-  }
-
-  .featuresCard h3 {
-    font-size: 21px;
-  }
-
-  .featuresCard p {
-    font-size: 15px;
-  }
-
-  /* About */
-
-  .about {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  .aboutContainer {
-    gap: 30px;
-  }
-
-  .aboutContainer img {
-    width: 45%;
-    height: auto;
-  }
-
-  /* Categories */
-
-  .category {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  /* Popular Courses */
-
-  .pCourses {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  .coursesCards {
-    gap: 20px;
-  }
-
-  .card1,
-  .card2,
-  .card3 {
-    width: 31%;
-  }
-
-  .courseImage img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Instructors */
-
-  .instructors {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  .instructorCards {
-    gap: 15px;
-  }
-
-  .instructorCard {
-    width: 23%;
-  }
-
-  .instructorImage img {
-    width: 100%;
-    height: auto;
-  }
-
-  /* Testimonials */
-
-  .testimonials {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  .testimonialCards {
-    gap: 20px;
-  }
-
-  .testimonialCard {
-    width: 32%;
-  }
-
-  /* Footer */
-
-  .footer {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-}
-
-
-/* =========================
-   TABLETS
-   ========================= */
-
-@media (max-width: 800px) {
-
-  /* Navbar */
-
-  .hideOnMobile {
-    display: none;
-  }
-
-  .menu-button {
-    display: block;
-  }
-
-
-  /* Hero */
-
-  .heroSection {
-    height: 500px;
-  }
-
-  .heroContent {
-    padding: 80px 40px;
-  }
-
-  .heroContent span {
-    width: 100%;
-    max-width: 550px;
-  }
-
-  .heroSlideBtn {
-    right: 20px;
-    transform: none;
-  }
-
-
-  /* Features */
-
-  .features {
-    padding: 100px 30px 40px;
-    margin-top: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .featuresCard {
-    width: 100%;
-  }
-
-
-  /* About */
-
-  .about {
-    padding: 60px 30px;
-  }
-
-  .aboutContainer {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .aboutContainer img {
-    width: 100%;
-    max-width: 550px;
-    height: auto;
-  }
-
-  .aboutContent {
-    width: 100%;
-    max-width: 700px;
-  }
-
-
-  /* Categories */
-
-  .category {
-    padding: 60px 30px;
-    scale: 1;
-    margin-top: 0;
-  }
-
-  .categoryGrid {
-    max-width: 700px;
-    height: 400px;
-  }
-
-
-  /* Popular Courses */
-
-  .pCourses {
-    padding: 60px 30px;
-    scale: 1;
-    margin-top: 0;
-  }
-
-  .coursesCards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  .card1,
-  .card2,
-  .card3 {
-    width: 100%;
-  }
-
-  .courseImage img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  /* Instructors */
-
-  .instructors {
-    padding: 60px 30px;
-    scale: 1;
-  }
-
-  .instructorCards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  .instructorCard {
-    width: 100%;
-  }
-
-  .instructorImage img {
-    width: 100%;
-    height: auto;
-  }
-
-
-  /* Testimonials */
-
-  .testimonials {
-    padding: 60px 30px;
-    scale: 1;
-  }
-
-  .testimonialCards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
-
-  .testimonialCard {
-    width: 100%;
-  }
-
-
-  /* Footer */
-
-  .footer {
-    padding: 60px 30px 20px;
-  }
-
-  .footerContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-  }
-
-  .footerBox {
-    width: 100%;
-  }
-
-  .footerBottom {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-  }
-
-}
-
 
 /* =========================
    MOBILE
@@ -1412,71 +1114,4 @@ select option {
 
 }
 
-
-/* =========================
-   SMALL MOBILE
-   ========================= */
-
-@media (max-width: 442px) {
-
-  .sidebar {
-    width: 100%;
-  }
-
-  /* Navbar */
-
-  .logo img {
-    height: 35px;
-  }
-
-
-  /* Hero */
-
-  .heroContent {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
-  .heroContent h1 {
-    font-size: 28px;
-  }
-
-  .heroSlideBtn {
-    right: 5px;
-  }
-
-  .heroSlideBtn img {
-    width: 32px;
-    height: 32px;
-  }
-
-
-  /* About */
-
-  .aboutList {
-    flex-direction: column;
-    gap: 0;
-  }
-
-
-  /* Category */
-
-  .categoryGrid {
-    width: 100%;
-  }
-
-  .categoryText {
-    right: 5px;
-    bottom: 5px;
-    padding: 8px 12px;
-  }
-
-
-  /* Footer */
-
-  .newsletterForm {
-    width: 100%;
-  }
-
-}
 
