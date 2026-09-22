@@ -2,568 +2,626 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>eLearning</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eLearning</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <!-- Navbar  -->
-        <nav class="navbar">
-            <div class="leftNav"><span>
-                    <img src="images/logo.png" alt="logo">
-                </span></div>
-            <div>
-                <ul class="rightNav">
-                    <li class="nav-item"><a href="#">Home</a></li>
-                    <li class="nav-item"><a href="#">About</a></li>
-                    <li class="nav-item"><a href="#">Courses</a></li>
-                    <li class="">
-                        <select name="prices" id="prices">
-                            <option value="Page">Page</option>
-                            <option value="Page1">Page1</option>
-                        </select>
-                    </li>
-                    <li class="nav-item"><a href="#">Contact</a></li>
-                    <div class="joinNowBox">
-                        <li class="nav-item"><a id="joinNow" href="#">Join Now </a><span>→</span></li>
-                    </div>
-                </ul>
-            </div>
-        </nav>
-        <!-- Hero section -->
-        <div class="heroSection">
-            <div class="heroSliderButton">
-                <img src="images/leftArrowButton.png" alt="leftArrowButton" height="40px" width="40px">
-                <img src="images/rightArrowButton.png" alt="rightArrowButton" height="40px" width="40px">
-            </div>
-            <div class="heroHeadingBox">
-                <h4 class="heroHeading">BEST ONLINE COURSES</h4>
-                <h2>Get educated online from your home</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod. Lorem ipsum dolor sit amet
-                    consectetur adipisicing elit. </p>
-                <button class="readMoreButton" type="button">Read More</button>
-                <button class="joinNowButton" type="button">Join Now</button>
-            </div>
+  <nav>
+
+    <ul class="sidebar">
+
+      <li onclick=hideSidebar()>
+        <a href="#">
+          <img src="./images/cross.png" alt="Menu">
+        </a>
+      </li>
+
+      <li><a href="#" class="active">HOME</a></li>
+      <li> <a href="#">ABOUT</a></li>
+      <li> <a href="#">COURSES</a></li>
+
+      <li class="dropdown">
+        <a href="#">PAGES <img src="./images/dropdown.png" alt="Dropdown"></a>
+
+        <ul class="dropdown-menu">
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+        </ul>
+      </li>
+
+      <li> <a href="#">CONTACTS</a></li>
+      <li class="join-btn"> <a href="#">Join Now ➝</a></li>
+    </ul>
+
+
+    <ul>
+      <li class="logo">
+        <a href="#">
+          <img src="./images/elearning logo.png" alt="eLearning">
+        </a>
+      </li>
+      <li class="hideOnMobile"><a href="#" class="active">HOME</a></li>
+      <li class="hideOnMobile"> <a href="#">ABOUT</a></li>
+      <li class="hideOnMobile"> <a href="#">COURSES</a></li>
+
+      <li class="hideOnMobile dropdown">
+        <!-- <a href="#">PAGES</a> -->
+        <a href="#">PAGES <img src="./images/dropdown.png" alt="Dropdown"></a>
+
+        <ul class="dropdown-menu">
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+        </ul>
+      </li>
+
+      <li class="hideOnMobile"> <a href="#">CONTACTS</a></li>
+      <li class="hideOnMobile"><a href="#" class="join-btn">Join Now ➝</a></li>
+      <li class="menu-button" onclick=showSidebar()>
+        <a href="#">
+          <img src="./images/menu.png" alt="Menu">
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <script>
+    function showSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'flex'
+    }
+
+    function hideSidebar() {
+      const sidebar = document.querySelector('.sidebar')
+      sidebar.style.display = 'none'
+    }
+  </script>
+
+  <!-- HERO SECTION -->
+  <div class="heroSection">
+
+
+    <div class="heroContent">
+      <p> BEST ONLINE COURSES</p>
+      <h1>Get Educated Online <br> From Your Home</h1>
+      <span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis sit, consequuntur laudantium voluptatem
+        numquam tempora vel perferendis, aliquam assumenda saepe enim sint, quaerat illum? Enim ratione porro eaque sit
+        accusamus?</span>
+
+
+      <div>
+        <div class="heroBtn">
+          <a href="">Read More</a>
+          <a href="">Join Now</a>
         </div>
-        <!-- Content section -->
-        <div class="contentSection">
-            <div class="featuresBox">
-                <div class="feature">
-                    <img src="./images/cap icon.png" alt="cap icon">
-                    <div>Skilled Instructors</div>
-                    <div>Lorem, ipsum dolor sit voluptate illo maiores ea! amet consectetur adipisicing elit.</div>
-                </div>
-                <div class="feature">
-                    <img src="./images/globe icon.png" alt="globe icon">
-                    <div>Online Classes</div>
-                    <div>Lorem, ipsum dolor sit voluptate illo maiores ea! amet consectetur adipisicing elit.</div>
-                </div>
-                <div class="feature">
-                    <img src="./images/home icon.png" alt="home icon">
-                    <div>Home Projects</div>
-                    <div>Lorem, ipsum dolor sit voluptate illo maiores ea! amet consectetur adipisicing elit.</div>
-                </div>
-                <div class="feature">
-                    <img src="./images/book icon.png" alt="book icon">
-                    <div>Book Library</div>
-                    <div>Lorem, ipsum dolor sit voluptate illo maiores ea! amet consectetur adipisicing elit.</div>
-                </div>
-            </div>
-            <!-- about Us section -->
-            <div class="aboutUsBox">
-                <img src="./images/image.png" alt="heroImage">
-                <div class="aboutUsText">
-                    <div>ABOUT US —</div>
-                    <div>Welcome to eLearning</div>
-                    <div class="reading">Reading books is a great habit that improves our minds. When you read every
-                        day,
-                        you
-                        learn new words and gain more knowledge about the world.
-                    </div>
-                    <div class="reading"> Books also help reduce stress by taking you to a quiet and imaginative place.
-                        Furthermore, regular reading sharpens your focus and memory skills. Everyone should spend at
-                        least
-                        twenty minutes a day reading a good book.
-                    </div>
-                    <div class="skills">
-                        <ul>
-                            <li class="feature1"><span class="arrowIcon">➜ </span>Online Classes</li>
-                            <li class="feature1"><span class="arrowIcon">➜ </span>International Certification</li>
-                            <li class="feature1"><span class="arrowIcon">➜ </span>Skill Instructor</li>
-                        </ul>
+      </div>
+      <div class="heroSlideBtn">
+        <a href=""> <img src="./images/angleLeft.png" alt="previous"> </a>
+        <a href=""><img src="./images/angleRight.png" alt="next"></a>
+      </div>
 
-                        <ul>
-                            <li class="feature2"><span class="arrowIcon">➜ </span>Online Classes</li>
-                            <li class="feature2"><span class="arrowIcon">➜ </span>International Certification</li>
-                            <li class="feature2"><span class="arrowIcon">➜ </span>Skill Instructor</li>
-                        </ul>
-                    </div>
-                    <button class="readMoreButton" type="button">Read More</button>
-
-                </div>
-            </div>
-        </div>
-        <div>
-
-            <section class="category">
-
-                <div class="categoryTitle">
-                    <span>CATEGORIES</span>
-                </div>
-
-                <h2>Courses Categories</h2>
-
-                <div class="categoryGrid">
-
-                    <div class="categoryWeb">
-                        <img src="./images/category/category1.png" alt="Web Design">
-
-                        <div class="categoryText">
-                            <h3>Web Design</h3>
-                            <p>49 Courses</p>
-                        </div>
-                    </div>
-
-
-                    <div class="categoryGraphic">
-                        <img src="./images/category/category2.jpeg" alt="Graphic Design">
-
-                        <div class="categoryText">
-                            <h3>Graphic Design</h3>
-                            <p>49 Courses</p>
-                        </div>
-                    </div>
-
-
-                    <div class="categoryVideo">
-                        <img src="./images/category/category3.jpeg" alt="Video Editing">
-
-                        <div class="categoryText">
-                            <h3>Video Editing</h3>
-                            <p>49 Courses</p>
-                        </div>
-                    </div>
-
-
-                    <div class="categoryMarketing">
-                        <img src="./images/category/category4.jpeg" alt="Online Marketing">
-
-                        <div class="categoryText">
-                            <h3>Online Marketing</h3>
-                            <p>49 Courses</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- /* Ppular Courses */ -->
-            <!-- Popular Courses -->
-
-            <section class="pCourses">
-
-                <div class="pCoursesTitle">
-                    <span>COURSES</span>
-                </div>
-
-                <h2>Popular Courses</h2>
-
-                <div class="coursesCards">
-
-                    <!-- Card 1 -->
-                    <div class="courseCard">
-
-                        <div class="courseImage">
-                            <img src="./images/courses/card1.jpg" alt="Web Design Course">
-
-                            <div class="courseBtns">
-                                <a href="#">Read More</a>
-                                <a href="#">Join Now</a>
-                            </div>
-                        </div>
-
-                        <div class="courseContent">
-                            <h3>$149.00</h3>
-
-                            <div class="rating">
-                                ★★★★★ <span>(123)</span>
-                            </div>
-
-                            <h4>Web Design & Development</h4>
-                            <p>Course for Beginners</p>
-                        </div>
-
-                        <div class="courseInfo">
-                            <span>👤 John Doe</span>
-                            <span>◷ 1.49 Hrs</span>
-                            <span>👥 30 Students</span>
-                        </div>
-
-                    </div>
-
-
-                    <!-- Card 2 -->
-                    <div class="courseCard">
-
-                        <div class="courseImage">
-                            <img src="./images/courses/card2.jpg" alt="Web Design Course">
-
-                            <div class="courseBtns">
-                                <a href="#">Read More</a>
-                                <a href="#">Join Now</a>
-                            </div>
-                        </div>
-
-                        <div class="courseContent">
-                            <h3>$149.00</h3>
-
-                            <div class="rating">
-                                ★★★★★ <span>(123)</span>
-                            </div>
-
-                            <h4>Web Design & Development</h4>
-                            <p>Course for Beginners</p>
-                        </div>
-
-                        <div class="courseInfo">
-                            <span>👤 John Doe</span>
-                            <span>◷ 1.49 Hrs</span>
-                            <span>👥 30 Students</span>
-                        </div>
-
-                    </div>
-
-
-                    <!-- Card 3 -->
-                    <div class="courseCard">
-
-                        <div class="courseImage">
-                            <img src="./images/courses/card3.jpg" alt="Web Design Course">
-
-                            <div class="courseBtns">
-                                <a href="#">Read More</a>
-                                <a href="#">Join Now</a>
-                            </div>
-                        </div>
-
-                        <div class="courseContent">
-                            <h3>$149.00</h3>
-
-                            <div class="rating">
-                                ★★★★★ <span>(123)</span>
-                            </div>
-
-                            <h4>Web Design & Development</h4>
-                            <p>Course for Beginners</p>
-                        </div>
-
-                        <div class="courseInfo">
-                            <span>👤 John Doe</span>
-                            <span>◷ 1.49 Hrs</span>
-                            <span>👥 30 Students</span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </section>
-
-            <!-- Expert Instructors -->
-
-            <section class="instructors">
-
-                <div class="instructorTitle">
-                    <span>INSTRUCTORS</span>
-                </div>
-
-                <h2>Expert Instructors</h2>
-
-                <div class="instructorCards">
-
-                    <div class="instructorCard">
-                        <div class="instructorImage">
-                            <img src="./images/instructors/instructor1.jpg" alt="Instructor">
-
-                            <div class="socialBtns">
-                                <a href="#">f</a>
-                                <a href="#">𝕏</a>
-                                <a href="#">in</a>
-                            </div>
-                        </div>
-
-                        <div class="instructorContent">
-                            <h3>Instructor Name</h3>
-                            <p>Designation</p>
-                        </div>
-                    </div>
-
-
-                    <div class="instructorCard">
-                        <div class="instructorImage">
-                            <img src="./images/instructors/instructor2.jpg" alt="Instructor">
-
-                            <div class="socialBtns">
-                                <a href="#">f</a>
-                                <a href="#">𝕏</a>
-                                <a href="#">in</a>
-                            </div>
-                        </div>
-
-                        <div class="instructorContent">
-                            <h3>Instructor Name</h3>
-                            <p>Designation</p>
-                        </div>
-                    </div>
-
-
-                    <div class="instructorCard">
-                        <div class="instructorImage">
-                            <img src="./images/instructors/instructor3.jpg" alt="Instructor">
-
-                            <div class="socialBtns">
-                                <a href="#">f</a>
-                                <a href="#">𝕏</a>
-                                <a href="#">in</a>
-                            </div>
-                        </div>
-
-                        <div class="instructorContent">
-                            <h3>Instructor Name</h3>
-                            <p>Designation</p>
-                        </div>
-                    </div>
-
-
-                    <div class="instructorCard">
-                        <div class="instructorImage">
-                            <img src="./images/instructors/instructor4.jpg" alt="Instructor">
-
-                            <div class="socialBtns">
-                                <a href="#">f</a>
-                                <a href="#">𝕏</a>
-                                <a href="#">in</a>
-                            </div>
-                        </div>
-
-                        <div class="instructorContent">
-                            <h3>Instructor Name</h3>
-                            <p>Designation</p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- Testimonials -->
-
-            <section class="testimonials">
-
-                <div class="testimonialTitle">
-                    <span>TESTIMONIAL</span>
-                </div>
-
-                <h2>Our Students Say!</h2>
-
-                <div class="testimonialCards">
-
-                    <!-- Testimonial 1 -->
-                    <div class="testimonialCard">
-
-                        <div class="student">
-                            <img src="./images/testimonials/student1.jpg" alt="Student">
-
-                            <h3>Client Name</h3>
-                            <p>Profession</p>
-                        </div>
-
-                        <div class="testimonialText">
-                            <p>
-                                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <!-- Testimonial 2 -->
-                    <div class="testimonialCard active">
-
-                        <div class="student">
-                            <img src="./images/testimonials/student2.jpg" alt="Student">
-
-                            <h3>Client Name</h3>
-                            <p>Profession</p>
-                        </div>
-
-                        <div class="testimonialText">
-                            <p>
-                                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                    <!-- Testimonial 3 -->
-                    <div class="testimonialCard">
-
-                        <div class="student">
-                            <img src="./images/testimonials/student3.jpg" alt="Student">
-
-                            <h3>Client Name</h3>
-                            <p>Profession</p>
-                        </div>
-
-                        <div class="testimonialText">
-                            <p>
-                                Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
-                                Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Slider Dots -->
-
-                <div class="testimonialDots">
-                    <span></span>
-                    <span class="active"></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
-            </section>
-
-
-            <!-- footer Section -->
-        </div>
-        <div class="footerSection">
-            <div class="footer">
-                <div class="item">
-                    <h5>Quick Link</h5>
-                    <ul>
-                        <li>&#xFF1E; About Us</li>
-                        <li>&#xFF1E; Contact Us</li>
-                        <li>&#xFF1E; Privacy Policy</li>
-                        <li>&#xFF1E; Terms & Conditions</li>
-                        <li>&#xFF1E; FAQs & Help</li>
-                    </ul>
-                </div>
-                <div class="item">
-                    <h5>Contact</h5>
-                    <ul>
-                        <li>123 street, New York, USA</li>
-                        <li>+012 345 67890</li>
-                        <li>info@example.com</li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="-2 -2 24 24">
-                                <path d="M-2 -2h24v24H-2z" fill="none" />
-                                <g fill="currentColor">
-                                    <path
-                                        d="M10 18a8 8 0 1 0 0-16a8 8 0 0 0 0 16m0 2C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10s-4.477 10-10 10" />
-                                    <path
-                                        d="M15 6.947c-.368.16-.763.27-1.178.318c.424-.25.748-.646.902-1.117a4.2 4.2 0 0 1-1.304.49A2.06 2.06 0 0 0 11.923 6c-1.133 0-2.051.905-2.051 2.02q0 .237.053.46a5.85 5.85 0 0 1-4.228-2.11a2 2 0 0 0-.278 1.015c0 .7.363 1.32.913 1.681a2.1 2.1 0 0 1-.93-.253v.025a2.03 2.03 0 0 0 1.646 1.98a2.1 2.1 0 0 1-.927.034a2.05 2.05 0 0 0 1.916 1.403a4.16 4.16 0 0 1-2.548.864q-.248 0-.489-.028A5.86 5.86 0 0 0 8.144 14c3.774 0 5.837-3.078 5.837-5.748l-.007-.262A4.1 4.1 0 0 0 15 6.947" />
-                                </g>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="-2 -2 24 24">
-                                <path d="M-2 -2h24v24H-2z" fill="none" />
-                                <g fill="currentColor">
-                                    <path
-                                        d="M8.695 6.937v1.377H7.687v1.683h1.008V15h2.072V9.997h1.39s.131-.807.194-1.69h-1.576v-1.15c0-.173.226-.404.45-.404h1.128V5h-1.535C8.644 5 8.695 6.685 8.695 6.937" />
-                                    <path
-                                        d="M10 18a8 8 0 1 0 0-16a8 8 0 0 0 0 16m0 2C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10s-4.477 10-10 10" />
-                                </g>
-                            </svg>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="-2 -2 24 24">
-                                <path d="M-2 -2h24v24H-2z" fill="none" />
-                                <g fill="currentColor">
-                                    <path
-                                        d="M10 18a8 8 0 1 0 0-16a8 8 0 0 0 0 16m0 2C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10s-4.477 10-10 10" />
-                                    <path
-                                        d="M12.923 6.526H7.077C5.93 6.526 5 7.446 5 8.58v2.89c0 1.135.93 2.054 2.077 2.054h5.846c1.147 0 2.077-.92 2.077-2.054V8.58c0-1.135-.93-2.054-2.077-2.054m-1.404 3.64l-2.735 1.29a.11.11 0 0 1-.157-.099v-2.66a.11.11 0 0 1 .16-.097l2.734 1.37a.11.11 0 0 1-.002.196" />
-                                </g>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="-2 -2 24 24">
-                                <path d="M-2 -2h24v24H-2z" fill="none" />
-                                <g fill="currentColor">
-                                    <path
-                                        d="M15 11.13v3.697h-2.143v-3.45c0-.866-.31-1.457-1.086-1.457c-.592 0-.945.398-1.1.784c-.056.138-.071.33-.071.522v3.601H8.456s.029-5.842 0-6.447H10.6v.913l-.014.021h.014v-.02c.285-.44.793-1.066 1.932-1.066c1.41 0 2.468.922 2.468 2.902M6.213 5.271C5.48 5.271 5 5.753 5 6.385c0 .62.466 1.115 1.185 1.115h.014c.748 0 1.213-.496 1.213-1.115c-.014-.632-.465-1.114-1.199-1.114m-1.086 9.556h2.144V8.38H5.127z" />
-                                    <path
-                                        d="M10 18a8 8 0 1 0 0-16a8 8 0 0 0 0 16m0 2C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10s-4.477 10-10 10" />
-                                </g>
-                            </svg>
-
-
-                        </li>
-                    </ul>
-                </div>
-                <div class="item">
-                    <h5>Gallery</h5>
-                    <div class="footerGallery">
-
-                        <div class="image-box">
-                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=300&h=150&fit=crop"
-                                alt="Image 1">
-                        </div>
-
-                        <div class="image-box">
-                            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=300&h=150&fit=crop"
-                                alt="Image 2">
-                        </div>
-
-                        <div class="image-box">
-                            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=300&h=150&fit=crop"
-                                alt="Image 3">
-                        </div>
-
-                        <div class="image-box">
-                            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=300&h=150&fit=crop"
-                                alt="Image 4">
-                        </div>
-
-                        <div class="image-box">
-                            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=300&h=150&fit=crop"
-                                alt="Image 5">
-                        </div>
-
-                        <div class="image-box">
-                            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=300&h=150&fit=crop"
-                                alt="Image 6">
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <h5>Newsletter</h5>
-                    <p>Subscribe to our newsletter to get the latest updates and offers.</p>
-                    <div class="inputBox"><input type="email" placeholder="     Your email">
-                        <div>Sign Up</div>
-                    </div>
-                </div>
-            </div>
-            <div class="line"></div>
-            <div class="footerBottom">
-                <div>© <span class="underline">Your Site Name,</span> All Right Reserved. Designed By <span
-                        class="underline">HTML Codex</span></div>
-                <div class="footerNavigator"><span>Home</span> <span>Cookies</span> <span>Help</span> <span>FQAs</span>
-                </div>
-            </div>
-            <div class="footerEnd">Distributed By <span class="underline">ThemeWagon</span></div>
-        </div>
     </div>
+
+  </div>
+
+  <div class="large">
+    <!-- Feature section -->
+    <section class="features">
+      <div class="featuresCard">
+        <img src="./images/features/capIcon.png" alt="Skilled Instructors">
+        <h3>Skilled Instructors</h3>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dignissimos vitae nulla .</p>
+      </div>
+
+      <div class="featuresCard">
+        <img src="./images/features/globeIcon.png" alt="Online Classes">
+        <h3>Online Classes</h3>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dignissimos vitae nulla .</p>
+      </div>
+
+      <div class="featuresCard">
+        <img src="./images/features/homeIcon.png" alt="Home Projects">
+        <h3>Home Projects</h3>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dignissimos vitae nulla .</p>
+      </div>
+
+      <div class="featuresCard">
+        <img src="./images/features/bookIcon.png" alt="Book Library">
+        <h3>Book Library</h3>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing xelit. Voluptatibus dignissimos vitae nulla .</p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="aboutContainer">
+        <img src="images/about/about2.png" alt="">
+
+        <div class="aboutContent">
+
+          <div class="aboutTitle">
+            <span>ABOUT US</span>
+
+            <div class="aboutLines">
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+
+          <h2> Welcome to eLearning</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi facere nemo quaerat. Sunt, minima
+            similique vel rem delectus dicta explicabo corporis excepturi? Cumque, quos aliquid! Harum iste eius
+            obcaecati
+            atque?</p>
+
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias exercitationem et sint fugiat doloribus
+            enim illo iure hic quam totam cum voluptate, quibusdam, quod facere nisi. Molestias ullam ab suscipit.</p>
+
+
+
+
+          <div class="aboutList">
+
+            <div>
+              <p><span>➔</span> Skilled Instructors</p>
+              <p><span>➔</span> International Certificate</p>
+              <p><span>➔</span> Online Classes</p>
+            </div>
+
+            <div>
+              <p><span>➔</span> Get a Job</p>
+              <p><span>➔</span> Skilled Instructors</p>
+              <p><span>➔</span> International Certificate</p>
+            </div>
+
+          </div>
+
+          <a href="" class="aboutBtn">Read More➔</a>
+
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Categogies Section -->
+
+    <!-- Course Categories -->
+
+    <section class="category">
+
+      <div class="categoryTitle">
+        <span>CATEGORIES</span>
+      </div>
+
+      <h2>Courses Categories</h2>
+
+      <div class="categoryGrid">
+
+        <div class="categoryWeb">
+          <img src="./images/category/category1.png" alt="Web Design">
+
+          <div class="categoryText">
+            <h3>Web Design</h3>
+            <p>49 Courses</p>
+          </div>
+        </div>
+
+
+        <div class="categoryGraphic">
+          <img src="./images/category/category2.jpeg" alt="Graphic Design">
+
+          <div class="categoryText">
+            <h3>Graphic Design</h3>
+            <p>49 Courses</p>
+          </div>
+        </div>
+
+
+        <div class="categoryVideo">
+          <img src="./images/category/category3.jpeg" alt="Video Editing">
+
+          <div class="categoryText">
+            <h3>Video Editing</h3>
+            <p>49 Courses</p>
+          </div>
+        </div>
+
+
+        <div class="categoryMarketing">
+          <img src="./images/category/category4.jpeg" alt="Online Marketing">
+
+          <div class="categoryText">
+            <h3>Online Marketing</h3>
+            <p>49 Courses</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- /* Ppular Courses */ -->
+    <!-- Popular Courses -->
+
+    <section class="pCourses">
+
+      <div class="pCoursesTitle">
+        <span>COURSES</span>
+      </div>
+
+      <h2>Popular Courses</h2>
+
+      <div class="coursesCards">
+
+        <!-- Card 1 -->
+        <div class="card1">
+
+          <div class="courseImage">
+            <img src="./images/courses/card1.jpg" alt="Web Design Course">
+
+            <div class="courseBtns">
+              <a href="#">Read More</a>
+              <a href="#">Join Now</a>
+            </div>
+          </div>
+
+          <div class="courseContent">
+            <h3>$149.00</h3>
+
+            <div class="rating">
+              ★★★★★ <span>(123)</span>
+            </div>
+
+            <h4>Web Design & Development</h4>
+            <p>Course for Beginners</p>
+          </div>
+
+          <div class="courseInfo">
+            <span>👤 John Doe</span>
+            <span>🕒 1.49 Hrs</span>
+            <span>👥 30 Students</span>
+          </div>
+
+        </div>
+
+
+        <!-- Card 2 -->
+        <div class="card2">
+
+          <div class="courseImage">
+            <img src="./images/courses/card2.jpg" alt="Web Design Course">
+
+            <div class="courseBtns">
+              <a href="#">Read More</a>
+              <a href="#">Join Now</a>
+            </div>
+          </div>
+
+          <div class="courseContent">
+            <h3>$149.00</h3>
+
+            <div class="rating">
+              ★★★★★ <span>(123)</span>
+            </div>
+
+            <h4>Web Design & Development</h4>
+            <p>Course for Beginners</p>
+          </div>
+
+          <div class="courseInfo">
+            <span>👤 John Doe</span>
+            <span>🕒 1.49 Hrs</span>
+            <span>👥 30 Students</span>
+          </div>
+
+        </div>
+
+
+        <!-- Card 3 -->
+        <div class="card3">
+
+          <div class="courseImage">
+            <img src="./images/courses/card3.jpg" alt="Web Design Course">
+
+            <div class="courseBtns">
+              <a href="#">Read More</a>
+              <a href="#">Join Now</a>
+            </div>
+          </div>
+
+          <div class="courseContent">
+            <h3>$149.00</h3>
+
+            <div class="rating">
+              ★★★★★ <span>(123)</span>
+            </div>
+
+            <h4>Web Design & Development</h4>
+            <p>Course for Beginners</p>
+          </div>
+
+          <div class="courseInfo">
+            <span>👤 John Doe</span>
+            <span>🕒 1.49 Hrs</span>
+            <span>👥 30 Students</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Expert Instructors -->
+
+    <section class="instructors">
+
+      <div class="instructorTitle">
+        <span>INSTRUCTORS</span>
+      </div>
+
+      <h2>Expert Instructors</h2>
+
+      <div class="instructorCards">
+
+        <div class="instructorCard">
+          <div class="instructorImage">
+            <img src="./images/instructors/instructor1.jpg" alt="Instructor">
+
+            <div class="socialBtns">
+              <a href="#">f</a>
+              <a href="#">𝕏</a>
+              <a href="#">in</a>
+            </div>
+          </div>
+
+          <div class="instructorContent">
+            <h3>Instructor Name</h3>
+            <p>Designation</p>
+          </div>
+        </div>
+
+
+        <div class="instructorCard">
+          <div class="instructorImage">
+            <img src="./images/instructors/instructor2.jpg" alt="Instructor">
+
+            <div class="socialBtns">
+              <a href="#">f</a>
+              <a href="#">𝕏</a>
+              <a href="#">in</a>
+            </div>
+          </div>
+
+          <div class="instructorContent">
+            <h3>Instructor Name</h3>
+            <p>Designation</p>
+          </div>
+        </div>
+
+
+        <div class="instructorCard">
+          <div class="instructorImage">
+            <img src="./images/instructors/instructor3.jpg" alt="Instructor">
+
+            <div class="socialBtns">
+              <a href="#">f</a>
+              <a href="#">𝕏</a>
+              <a href="#">in</a>
+            </div>
+          </div>
+
+          <div class="instructorContent">
+            <h3>Instructor Name</h3>
+            <p>Designation</p>
+          </div>
+        </div>
+
+
+        <div class="instructorCard">
+          <div class="instructorImage">
+            <img src="./images/instructors/instructor4.jpg" alt="Instructor">
+
+            <div class="socialBtns">
+              <a href="#">f</a>
+              <a href="#">𝕏</a>
+              <a href="#">in</a>
+            </div>
+          </div>
+
+          <div class="instructorContent">
+            <h3>Instructor Name</h3>
+            <p>Designation</p>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Testimonials -->
+
+    <section class="testimonials">
+
+      <div class="testimonialTitle">
+        <span>TESTIMONIAL</span>
+      </div>
+
+      <h2>Our Students Say!</h2>
+
+      <div class="testimonialCards">
+
+        <!-- Testimonial 1 -->
+        <div class="testimonialCard">
+
+          <div class="student">
+            <img src="./images/testimonials/student1.jpg" alt="Student">
+
+            <h3>Client Name</h3>
+            <p>Profession</p>
+          </div>
+
+          <div class="testimonialText">
+            <p>
+              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
+              Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.
+            </p>
+          </div>
+
+        </div>
+
+
+        <!-- Testimonial 2 -->
+        <div class="testimonialCard active">
+
+          <div class="student">
+            <img src="./images/testimonials/student2.jpg" alt="Student">
+
+            <h3>Client Name</h3>
+            <p>Profession</p>
+          </div>
+
+          <div class="testimonialText">
+            <p>
+              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
+              Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.
+            </p>
+          </div>
+
+        </div>
+
+
+        <!-- Testimonial 3 -->
+        <div class="testimonialCard">
+
+          <div class="student">
+            <img src="./images/testimonials/student3.jpg" alt="Student">
+
+            <h3>Client Name</h3>
+            <p>Profession</p>
+          </div>
+
+          <div class="testimonialText">
+            <p>
+              Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit.
+              Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Slider Dots -->
+
+      <div class="testimonialDots">
+        <span></span>
+        <span class="active"></span>
+        <span></span>
+        <span></span>
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <!-- Footer -->
+
+  <footer class="footer">
+
+    <div class="footerContainer">
+
+      <!-- Quick Link -->
+      <div class="footerBox">
+        <h3>Quick Link</h3>
+
+        <a href="#">› About Us</a>
+        <a href="#">› Contact Us</a>
+        <a href="#">› Privacy Policy</a>
+        <a href="#">› Terms & Condition</a>
+        <a href="#">› FAQs & Help</a>
+      </div>
+
+
+      <!-- Contact -->
+      <div class="footerBox">
+        <h3>Contact</h3>
+
+        <p>⌖ 123 Street, New York, USA</p>
+        <p>⌕ +012 345 67890</p>
+        <p>✉ info@example.com</p>
+
+        <div class="footerSocial">
+          <a href="#">𝕏</a>
+          <a href="#">f</a>
+          <a href="#">▶</a>
+          <a href="#">in</a>
+        </div>
+      </div>
+
+
+      <!-- Gallery -->
+      <div class="footerBox gallery">
+        <h3>Gallery</h3>
+
+        <div class="galleryImages">
+          <img src="./images/courses/card1.jpg" alt="Gallery">
+          <img src="./images/courses/card2.jpg" alt="Gallery">
+          <img src="./images/courses/card3.jpg" alt="Gallery">
+
+          <img src="./images/courses/card1.jpg" alt="Gallery">
+          <img src="./images/courses/card2.jpg" alt="Gallery">
+          <img src="./images/courses/card3.jpg" alt="Gallery">
+        </div>
+      </div>
+
+
+      <!-- Newsletter -->
+      <div class="footerBox newsletter">
+        <h3>Newsletter</h3>
+
+        <p>
+          Dolor amet sit justo amet elitr clita ipsum elitr est.
+        </p>
+
+        <div class="newsletterForm">
+          <input type="email" placeholder="Your email">
+          <button>SignUp</button>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- Footer Bottom -->
+
+    <div class="footerBottom">
+
+      <p>
+        © <a href="#">Your Site Name</a>, All Right Reserved.
+        Designed By <a href="#">HTML Codex</a>
+      </p>
+
+      <div class="footerLinks">
+        <a href="#">Home</a>
+        <a href="#">Cookies</a>
+        <a href="#">Help</a>
+        <a href="#">FAQs</a>
+      </div>
+
+    </div>
+
+  </footer>
+
 </body>
 
 </html>
