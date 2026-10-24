@@ -13,8 +13,16 @@ a{
 }
 
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 1001;
   background-color: white;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 60px;
 }
 
 nav ul {
@@ -58,6 +66,13 @@ nav a:hover {
 
 nav a.active {
   color: #06a9b7;
+  background-color: #f0f0f0;
+}
+
+section[id],
+#home,
+#contact {
+  scroll-margin-top: 60px;
 }
 
 /* dropdown */
@@ -175,10 +190,41 @@ nav a img {
 }
 
 /* HERO SECTION */
-
-.heroSection{
+.heroContainer{
   position: relative;
+  height: 500px;
+  width: 100%;
+}
+.slide{
+  position: absolute;
+  left: 50%;
+}
+.heroSection1{
   background-image: linear-gradient(#0e0e0e75) ,url("./images/student2.jpg");
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+.heroSection2{
+  background-image: linear-gradient(#0e0e0e75) ,url("https://picsum.photos/seed/picsum/200/300");
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+.heroSection3{
+  background-image: linear-gradient(#0e0e0e75) ,url("images/student1.jpg");
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+.heroSection4{
+  background-image: linear-gradient(#0e0e0e75) ,url("https://picsum.photos/200/300");
   width: 100%;
   height: 500px;
   background-repeat: no-repeat;
@@ -1031,7 +1077,7 @@ html,
 body {
     width: 100%;
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 .newsletterForm {
@@ -1400,6 +1446,10 @@ a:hover {
     transform: none;
   }
 
+  .large {
+    scale: 1;
+    margin: 0;
+  }
 
   /* Features */
 
