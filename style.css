@@ -208,12 +208,12 @@ nav a img {
   background-position: center top;
 }
 .heroSection2{
-  background-image: linear-gradient(#0e0e0e75) ,url("https://picsum.photos/seed/picsum/200/300");
+  background-image: linear-gradient(#0e0e0e75) ,url("https://www.shutterstock.com/image-photo/elearning-platforms-digital-education-technologies-260nw-2695078357.jpg");
   width: 100%;
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center top;
+  background-position: center center;
 }
 .heroSection3{
   background-image: linear-gradient(#0e0e0e75) ,url("images/student1.jpg");
@@ -224,7 +224,7 @@ nav a img {
   background-position: center top;
 }
 .heroSection4{
-  background-image: linear-gradient(#0e0e0e75) ,url("https://picsum.photos/200/300");
+  background-image: linear-gradient(#0e0e0e75) ,url("https://www.shutterstock.com/image-photo/elearning-concept-person-using-laptop-260nw-2443026605.jpg");
   width: 100%;
   height: 500px;
   background-repeat: no-repeat;
@@ -328,12 +328,12 @@ nav a img {
 
 .featuresCard h3{
   margin-bottom: 15px;
-  font-size: 25px;
+  font-size: 21px;
 }
 
 .featuresCard p{
   margin: 0;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1;
 }
 
